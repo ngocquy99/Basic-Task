@@ -47,6 +47,7 @@ class RegisterController extends Controller
            
             "name" => $request->username,
             "email" => $request->email,
+            "password" =>$request->password,
 
         ];
         $user =User::where(['id'=> $id])->update($dataup);
