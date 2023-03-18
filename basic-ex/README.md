@@ -62,3 +62,41 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+composer install : sau khi clone can intsall composer de lay libary
+
+
+ \xampp\php\ext\bz2 : error  
+cach fix : https://www.youtube.com/watch?v=xP07_EqywRQ
+
+.env : tao 1 file moi truong 
+
+
+
+[] :mang array
+
+
+
+
+
+ // User::updated(['column'=>'value'])->where(['id' , $id]) 
+        auth()->login($user)
+
+// routing
+Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
+route : tao ra 1 duong dan url
+post : phuong thuc (get,....)
+/register : url dat ten cho route
+RegisterController::class : controller (thuc hien cau lenh hoac logic )
+	- 1 controller co the chua nhieu function
+	- 
+'register': function thuoc controller , function nay chua nhung logic cua controller
+	- update(Request $request){}
+		- reuqets : yeu cau 
+->name('register.perform'): ten viet tat cua route 
+
+
+overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) dan den duong truyen dan route, route se tro den controller
