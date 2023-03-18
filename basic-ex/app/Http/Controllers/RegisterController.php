@@ -15,6 +15,7 @@ class RegisterController extends Controller
      */
     public function show()
     {
+        
         return view('auth.register');
     }
 
@@ -27,11 +28,28 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request) 
     {
+
+
         $user = User::create($request->validated());
-    
-        // User::updated(['column'=>'value'])->where(['id' , $id]) 
-        auth()->login($user);
+
+
+
 
         return redirect('/')->with('success', "Account successfully registered.");
+    }
+
+    public function update(Request $request){
+    
+    //   dd($request->all());
+      $id = $request->id;
+
+        $dataup = [
+           
+            "name" => $request->username,
+            "email" => $request->email,
+
+        ];
+        $user =User::where(['id'=> $id])->update($dataup);
+        dd($user);
     }
 }
