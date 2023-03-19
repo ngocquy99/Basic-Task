@@ -41,16 +41,17 @@ class RegisterController extends Controller
     
     //   dd($request->all());
     
-      $name = $request->username;
+      $id = $request->id;
 
         $dataup = [
-           
-            "name" => $request->username,
+
             "email" => $request->email,
+            "name" => $request->name,
+            "username" => $request->username,
             "password" =>$request->password,
 
         ];
-        $user =User::where(['id'=> $name])->update($dataup);
+        $user =User::where(['id'=> $id])->update($dataup);
         dd($user);
     }
 }
