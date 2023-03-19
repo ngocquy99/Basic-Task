@@ -1,3 +1,4 @@
+use Illuminate\Contracts\Session\Session;
 @if(isset ($errors) && count($errors) > 0)
     <div class="alert alert-warning" role="alert">
         <ul class="list-unstyled mb-0">
@@ -9,7 +10,7 @@
 @endif
 
 @if(Session::get('success', false))
-    <?php $data = Session::get('success'); ?>
+    <?php $data = Session('success'); ?>
     @if (is_array($data))
         @foreach ($data as $msg)
             <div class="alert alert-warning" role="alert">

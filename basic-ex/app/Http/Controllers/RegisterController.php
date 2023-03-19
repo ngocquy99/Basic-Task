@@ -15,7 +15,6 @@ class RegisterController extends Controller
      */
     public function show()
     {
-        
         return view('auth.register');
     }
 
@@ -41,7 +40,8 @@ class RegisterController extends Controller
     public function update(Request $request){
     
     //   dd($request->all());
-      $id = $request->id;
+    
+      $name = $request->username;
 
         $dataup = [
            
@@ -50,7 +50,7 @@ class RegisterController extends Controller
             "password" =>$request->password,
 
         ];
-        $user =User::where(['id'=> $id])->update($dataup);
+        $user =User::where(['id'=> $name])->update($dataup);
         dd($user);
     }
 }
