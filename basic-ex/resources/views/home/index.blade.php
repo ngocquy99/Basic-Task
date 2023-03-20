@@ -12,8 +12,7 @@
     <form method="post" action="{{ route('update') }}">   
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <input  class="form-control" name="id" value="{{ old('email') }}" placeholder="id  " required="required" autofocus>
-        <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57">
+        <input  class="form-control" name="id" value="{{ old('id') }}" placeholder="id" required="required" autofocus>
         
         <h2 class="h3 mb-3 fw-normal">Update</h2>
 

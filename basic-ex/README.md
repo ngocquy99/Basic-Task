@@ -104,14 +104,14 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 
 -- Yêu cầu những chức năng cần thêm -- 
-user đã register và login chỉ được fix và update thông tin của mình
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  --- LÀM CÁI NÀY, CHƯA XONG
 thêm danh sách user có phân trang   --- làm tiếp, chưa xong
 
 tìm kiếm được user
-tìm hiểu getCredential trong LoginRequest
 
+yêu cầu add-on :
+user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update và user management sau này
 
 
