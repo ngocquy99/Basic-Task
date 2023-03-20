@@ -27,7 +27,7 @@ class RegisterController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function register(RegisterRequest $request) 
+    public function register(RegisterRequest $request)
     {
 
 
@@ -39,21 +39,31 @@ class RegisterController extends Controller
         return redirect('/')->with('success', "Account successfully registered.");
     }
 
-    public function update(Request $request){
-    
-    //   dd($request->all());
-    
-      $id = $request->id;
-      //thay id bằng username hoặc email, chưa xong
+
+
+    /**
+     * Handle update request
+     * 
+     */
+    public function update(Request $request)
+    {
+
+        //   dd($request->all());
+
+        $id = $request->id;
+        //thay id bằng username hoặc email, chưa xong
         $dataup = [
 
             "email" => $request->email,
-            "name" => $request->name,
+            "name"  => $request->name,
             "username" => $request->username,
-            "password" =>$request->password,
-
+            "password" => $request->password,
+            "phonenumber" => $request->phonenumber,
+            "gender" => $request->gender,
+            "placeofbirth" => $request->placeofbirth,
         ];
-        $user =User::where(['id'=> $id])->update($dataup);
+        
+        $user = User::where(['id' => $id])->update($dataup);
         // dd($user);
 
         return view('home.index');

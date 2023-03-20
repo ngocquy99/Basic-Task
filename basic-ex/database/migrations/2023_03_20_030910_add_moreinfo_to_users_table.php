@@ -15,12 +15,12 @@ class AddMoreinfoToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->integer('phone_number')->after('password')->default(0);
-            $table->string('gender')->after('phone_number')->default(0);
-            $table->string('place_of_birth')->after('gender')->default(0);
+            $table->string ('gender')->after('phone_number')->default(0);
+            $table->string ('place_of_birth')->after('gender')->default(0);
 
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

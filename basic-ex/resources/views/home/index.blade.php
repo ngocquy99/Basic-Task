@@ -57,6 +57,30 @@
                 <span class="text-danger text-left">{{ $errors->first('password_confirmation') }}</span>
             @endif
         </div>
+        
+        <div class="form-group form-floating mb-3">
+            <input type="text" class="form-control" name="phonenumber" value="{{ old('phonenumber') }}" placeholder="Phone Number" required="required">
+            <label for="floatingPhonenumber">Phone Number</label>
+            @if ($errors->has('phonenumber'))
+                <span class="text-danger text-left">{{ $errors->first('phonenumber') }}</span>
+            @endif
+        </div>
+
+        <div class="form-group form-floating mb-3">
+            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="Gender" required="required">
+            <label for="floatingGender">Gender</label>
+            @if ($errors->has('gender'))
+                <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
+            @endif
+        </div>
+
+        <div class="form-group form-floating mb-3">
+            <input type="text" class="form-control" name="placeofbirth" value="{{ old('placeofbirth') }}" placeholder="placeofbirth" required="required">
+            <label for="floatingPlace">placeofbirth</label>
+            @if ($errors->has('placeofbirth'))
+                <span class="text-danger text-left">{{ $errors->first('placeofbirth') }}</span>
+            @endif
+        </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
         
@@ -69,5 +93,6 @@
         <p class="lead">Your viewing the home page. Please login to view the restricted data.</p>
         @endguest
     </div>
+
     
 @endsection

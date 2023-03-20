@@ -106,11 +106,19 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 -- Yêu cầu những chức năng cần thêm -- 
 user đã register và login chỉ được fix và update thông tin của mình
 
-trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username --- LÀM CÁI NÀY, CHƯA XONG
+trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  --- LÀM CÁI NÀY, CHƯA XONG
+thêm danh sách user có phân trang   --- làm tiếp, chưa xong
 
+tìm kiếm được user
 tìm hiểu getCredential trong LoginRequest
 
+thêm nút để đi đến trang update và user management sau này
 
+
+
+thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 name sau khi update chưa hiện lên myAdmin, fix đi  --- done
+add boostrap  --- done
 sau khi update thành công redirect sang dashboard  --- done
+

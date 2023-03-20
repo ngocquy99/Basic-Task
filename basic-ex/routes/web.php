@@ -47,6 +47,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     // Route::post('/update','RegisterController@show')->name('register.show');
     Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
     Route::post('/update', [RegisterController::class, 'update'])->name('update');
+
 });
 
 
