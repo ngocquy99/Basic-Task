@@ -66,11 +66,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 
+
+-- KIEN THUC --
+
 composer install : sau khi clone can intsall composer de lay libary
 
 
  \xampp\php\ext\bz2 : error  
 cach fix : https://www.youtube.com/watch?v=xP07_EqywRQ
+
 
 .env : tao 1 file moi truong 
 
@@ -79,11 +83,6 @@ cach fix : https://www.youtube.com/watch?v=xP07_EqywRQ
 [] :mang array
 
 
-
-
-
- // User::updated(['column'=>'value'])->where(['id' , $id]) 
-        auth()->login($user)
 
 // routing
 Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
@@ -100,3 +99,16 @@ RegisterController::class : controller (thuc hien cau lenh hoac logic )
 
 
 overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) dan den duong truyen dan route, route se tro den controller
+
+
+
+
+-- Yêu cầu những chức năng cần thêm -- 
+user đã register và login chỉ được fix và update thông tin của mình
+trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username
+
+name sau khi update chưa hiện lên myAdmin, fix đi  --- ĐANG LÀM CÁI NÀY
+
+sau khi update thành công redirect sang dashboard
+thêm boostrap 
+tìm hiểu getCredential trong LoginRequest
