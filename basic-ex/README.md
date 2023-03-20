@@ -114,7 +114,10 @@ yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update và user management sau này
 
-
+link bao cronjob
+https://laravel.com/docs/10.x/scheduling
+https://www.itsolutionstuff.com/post/laravel-send-scheduled-emails-tutorialexample.html
+https://www.itsolutionstuff.com/post/laravel-send-scheduled-emails-tutorialexample.html
 
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
