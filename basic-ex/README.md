@@ -105,10 +105,12 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 -- Yêu cầu những chức năng cần thêm -- 
 user đã register và login chỉ được fix và update thông tin của mình
-trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username
 
-name sau khi update chưa hiện lên myAdmin, fix đi  --- ĐANG LÀM CÁI NÀY
+trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username --- LÀM CÁI NÀY, CHƯA XONG
 
-sau khi update thành công redirect sang dashboard
-thêm boostrap 
 tìm hiểu getCredential trong LoginRequest
+
+
+
+name sau khi update chưa hiện lên myAdmin, fix đi  --- done
+sau khi update thành công redirect sang dashboard  --- done

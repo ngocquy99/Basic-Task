@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use PhpParser\Node\Stmt\Return_;
 
 class RegisterController extends Controller
 {
@@ -43,7 +44,7 @@ class RegisterController extends Controller
     //   dd($request->all());
     
       $id = $request->id;
-
+      //thay id bằng username hoặc email, chưa xong
         $dataup = [
 
             "email" => $request->email,
@@ -53,6 +54,8 @@ class RegisterController extends Controller
 
         ];
         $user =User::where(['id'=> $id])->update($dataup);
-        dd($user);
+        // dd($user);
+
+        return view('home.index');
     }
 }
