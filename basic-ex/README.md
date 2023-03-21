@@ -116,6 +116,11 @@ https://tutsforweb.com/how-to-set-up-task-scheduling-cron-job-in-laravel/
 https://codeanddeploy.com/blog/laravel/laravel-9-cron-job-task-scheduling-with-example
 
 
+link notification 
+https://karlomikus.com/blog/web-push-notifications-with-laravel
+https://www.itsolutionstuff.com/post/laravel-8-firebase-web-push-notification-exampleexample.html
+https://www.scratchcode.io/laravel-notification-tutorial-with-example/
+https://viblo.asia/p/laravel-push-notification-tren-website-de-dang-demo-OeVKBMq25kW
 
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
