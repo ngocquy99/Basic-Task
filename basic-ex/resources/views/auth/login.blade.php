@@ -8,7 +8,6 @@
         
         <h1 class="h3 mb-3 fw-normal">Login</h1>
 
-        @include('layouts.partials.messages')
 
         <div class="form-group form-floating mb-3">
             <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
@@ -26,7 +25,7 @@
             @endif
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        <button class=" btn btn-lg btn-primary" type="submit">Login</button>
         
         @include('auth.partials.copy')
     </form>

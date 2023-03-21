@@ -8,11 +8,11 @@
 
     <hr>
 
-    <h1> Update </h1>
+    <h1> Update By ID </h1>
     <form method="post" action="{{ route('update') }}">   
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <input  class="form-control" name="id" value="{{ old('id') }}" placeholder="id" required="required" autofocus>
+        <input  class="form-control" name="id" value="{{ old('id') }}" placeholder="ID" required="required" autofocus>
         
         <h2 class="h3 mb-3 fw-normal">Update</h2>
 
@@ -75,13 +75,14 @@
 
         <div class="form-group form-floating mb-3">
             <input type="text" class="form-control" name="placeofbirth" value="{{ old('placeofbirth') }}" placeholder="placeofbirth" required="required">
-            <label for="floatingPlace">placeofbirth</label>
+            <label for="floatingPlace">Place Of Birth</label>
             @if ($errors->has('placeofbirth'))
                 <span class="text-danger text-left">{{ $errors->first('placeofbirth') }}</span>
             @endif
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
+
         
         @include('auth.partials.copy')
     </form>

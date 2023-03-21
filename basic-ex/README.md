@@ -71,18 +71,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 composer install : sau khi clone can intsall composer de lay libary
 
-
  \xampp\php\ext\bz2 : error  
 cach fix : https://www.youtube.com/watch?v=xP07_EqywRQ
 
-
 .env : tao 1 file moi truong 
 
-
-
 [] :mang array
-
-
 
 // routing
 Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
@@ -114,10 +108,14 @@ yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update và user management sau này
 
-link bao cronjob
+
+link bai cronjob
 https://laravel.com/docs/10.x/scheduling
-https://www.itsolutionstuff.com/post/laravel-send-scheduled-emails-tutorialexample.html
-https://www.itsolutionstuff.com/post/laravel-send-scheduled-emails-tutorialexample.html
+https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R
+https://tutsforweb.com/how-to-set-up-task-scheduling-cron-job-in-laravel/
+https://codeanddeploy.com/blog/laravel/laravel-9-cron-job-task-scheduling-with-example
+
+
 
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
