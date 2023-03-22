@@ -47,10 +47,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
     // Route::post('/update','RegisterController@show')->name('register.show');
     Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
-    Route::post('/update', [RegisterController::class, 'update'])->name('update');
+    Route::post('/update', 'UpdateController@update')->name('update.perform');
 
 
-    
+
     //user pagination
     // Route::get('/pagination', 'UserController@index')->name('user.index');
 

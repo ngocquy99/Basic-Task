@@ -9,7 +9,7 @@
     <hr>
 
     <h1> Update By ID </h1>
-    <form method="post" action="{{ route('update') }}">
+    <form method="post" action="{{ route('update.perform') }}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <input class="form-control" name="id" value="{{ old('id') }}" placeholder="ID" required="required" autofocus>
