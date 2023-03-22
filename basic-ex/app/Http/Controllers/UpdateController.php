@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateRequest;
 
 class UpdateController extends Controller
 {
@@ -12,7 +13,7 @@ class UpdateController extends Controller
      * Handle update request
      * 
      */
-    public function update(Request $request)
+    public function update(UpdateRequest $request)
     {
 
         //   dd($request->all());

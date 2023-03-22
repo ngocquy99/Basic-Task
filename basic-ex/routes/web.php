@@ -49,6 +49,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
     Route::post('/update', 'UpdateController@update')->name('update.perform');
 
+    
+
 
 
     //user pagination

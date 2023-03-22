@@ -106,21 +106,25 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 -- Yêu cầu những chức năng cần thêm -- 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  --- LÀM CÁI NÀY, CHƯA XONG
-tao controller rieng cho user page lay thong tin tu user tao ra bang
-tao view rieng cho update va va bang user
-tao them update authen dieu kien khi update nhu la mat khau 8 so,...
-
+tạo controller riêng cho user page lấy thông tin từ database user tạo ra bảng
 tìm kiếm được user
+tạo view riêng cho update và bảng user
+FIX password hoặc username hoặc email sau khi update không thể login được
+
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update và user management sau này
 
 
+-- DONE -- 
+
+tao controller rieng cho update  --- done
 tao bang hien thi toan bo user tren web --- done
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 name sau khi update chưa hiện lên myAdmin, fix đi  --- done
 add boostrap  --- done
 sau khi update thành công redirect sang dashboard  --- done
+tạo thêm update authen điều kiện khi update như là mật khẩu 8 số, ....  --- done
 
