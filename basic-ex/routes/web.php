@@ -49,11 +49,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
     Route::post('/update', [RegisterController::class, 'update'])->name('update');
 
+
+    
     //user pagination
     // Route::get('/pagination', 'UserController@index')->name('user.index');
 
     //Notification 
-    Route::get('/send', '\App\Http\Controllers\NotiController@send')->name('noti.send');
+    // Route::get('/send', '\App\Http\Controllers\NotiController@send')->name('noti.send');
 
 });
 

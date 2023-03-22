@@ -91,6 +91,12 @@ RegisterController::class : controller (thuc hien cau lenh hoac logic )
 		- reuqets : yeu cau 
 ->name('register.perform'): ten viet tat cua route 
 
+neu variable bi undefined xem da hien thi dung view chua
+
+$users =User::where('id','>=','1')->get();
+User : bang user
+where : cau dieu kien
+$users : bien lay ra thong tin tu bang User theo dieu kien tim kiem 
 
 overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) dan den duong truyen dan route, route se tro den controller
 
@@ -100,7 +106,9 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 -- Yêu cầu những chức năng cần thêm -- 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  --- LÀM CÁI NÀY, CHƯA XONG
-thêm danh sách user có phân trang   --- làm tiếp, chưa xong
+tao controller rieng cho user page lay thong tin tu user tao ra bang
+tao view rieng cho update va va bang user
+tao them update authen dieu kien khi update nhu la mat khau 8 so,...
 
 tìm kiếm được user
 
@@ -109,19 +117,7 @@ user đã register và login chỉ được fix và update thông tin của mìn
 thêm nút để đi đến trang update và user management sau này
 
 
-link bai cronjob
-https://laravel.com/docs/10.x/scheduling
-https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R
-https://tutsforweb.com/how-to-set-up-task-scheduling-cron-job-in-laravel/
-https://codeanddeploy.com/blog/laravel/laravel-9-cron-job-task-scheduling-with-example
-
-
-link notification 
-https://karlomikus.com/blog/web-push-notifications-with-laravel
-https://www.itsolutionstuff.com/post/laravel-8-firebase-web-push-notification-exampleexample.html
-https://www.scratchcode.io/laravel-notification-tutorial-with-example/
-https://viblo.asia/p/laravel-push-notification-tren-website-de-dang-demo-OeVKBMq25kW
-
+tao bang hien thi toan bo user tren web --- done
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 name sau khi update chưa hiện lên myAdmin, fix đi  --- done

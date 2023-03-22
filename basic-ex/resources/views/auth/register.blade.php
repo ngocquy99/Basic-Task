@@ -5,7 +5,7 @@
     <form method="post" action="{{ route('register.perform') }}">   
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57">
+        <img class="mb-4" src="assets/Bootstrap_logo.svg.png" alt="" width="72" height="57">
         
         <h1 class="h3 mb-3 fw-normal">Register</h1>
 
@@ -50,11 +50,14 @@
         </div>
 
         <div class="form-group form-floating mb-3">
-            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="Gender" required="required">
-            <label for="floatingGender">gender</label>
+        <select class="form-select" aria-label="Default select example" name="gender" placeholder="Gender" required="required">
+            <label for="floatingGender"> <option selected>Gender</option></label>
             @if ($errors->has('gender'))
-                <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
+            <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
             @endif
+            <option value="Nữ">Nữ</option>
+            <option value="Nam">Nam</option>
+            </select>
         </div>
 
         <div class="form-group form-floating mb-3">

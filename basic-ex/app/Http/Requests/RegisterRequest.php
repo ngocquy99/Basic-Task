@@ -31,8 +31,8 @@ class RegisterRequest extends FormRequest
             'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password',
             'phonenumber' => 'required|digits:10',
-            'gender' => 'required|',
-            'placeofbirth' => 'required|'
+            'gender' => 'required',
+            'placeofbirth' => 'required'
         ];
     }
 }
