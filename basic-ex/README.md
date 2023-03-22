@@ -110,6 +110,7 @@ tìm kiếm được user ( link bài đang theo : https://www.educative.io/answ
 tạo view riêng cho update ( đã tạo xong view, controller nhưng chưa hiện ra được qua url, chưa xong )  --- đang làm cái này, chưa xong
 FIX password hoặc username hoặc email sau khi update không thể login được
 sửa quê quán place of birth của register và update sang datalist form control bootstrap ( link : https://getbootstrap.com/docs/5.0/forms/form-control/ )
+có thể sửa gender và place of birth sang button with dropdown ( link : https://getbootstrap.com/docs/4.1/components/input-group/ )
 
 
 
@@ -123,10 +124,11 @@ thêm thông tin cho about trong navbar
 
 -- DONE -- 
 
-tao controller rieng cho update  --- done
-tao bang hien thi toan bo user tren web --- done
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
+
+tao controller rieng cho update  --- done
+tao bang hien thi toan bo user tren web --- done
 name sau khi update chưa hiện lên myAdmin, fix đi  --- done
 add boostrap  --- done
 sau khi update thành công redirect sang dashboard  --- done
