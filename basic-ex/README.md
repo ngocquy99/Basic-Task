@@ -107,13 +107,15 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  LÀM CÁI NÀY TIẾP THEO
 tìm kiếm được user
-tạo view riêng cho update 
+tạo view riêng cho update ( đã tạo xong view, controller nhưng chưa hiện ra được qua url, chưa xong )  --- đang làm cái này, chưa xong
 FIX password hoặc username hoặc email sau khi update không thể login được
+thêm thông tin cho about trong navbar
 
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update và user management sau này
+
 
 
 -- DONE -- 

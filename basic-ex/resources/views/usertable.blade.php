@@ -1,6 +1,7 @@
 @extends('layouts.app-master')
 
 @section('content')
+<h1>User Imformation</h1>
 <table class="table table-striped" action="{{ route('table.show') }}" >
             <thead>
                 <tr>
@@ -8,6 +9,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Username</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Gender</th>
                 </tr>
             </thead>
@@ -18,6 +20,7 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->username}}</td>
+                    <td>{{$user->email}}</td>
                     <td>{{$user->gender}}</td>
                 </tr>
                 @endforeach

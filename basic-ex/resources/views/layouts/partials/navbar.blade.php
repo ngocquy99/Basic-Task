@@ -8,7 +8,7 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="{{ route('home.index') }}" class="nav-link px-2 text-secondary">Home</a></li>
         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
       </ul>
 
@@ -20,6 +20,7 @@
               {{auth()->user()->name}}
               <div class="text-end">
                 <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2 position-absolute top-0 end-0">Logout</a>
+                <a href="{{ route('table.show') }}" class="btn btn-outline-light me-2 position-absolute top-0 start-0">Users Table</a>
               </div>
               @endauth
 

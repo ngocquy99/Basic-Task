@@ -16,10 +16,9 @@ class UpdateController extends Controller
     public function update(UpdateRequest $request)
     {
 
-        //   dd($request->all());
-
         $id = $request->id;
         //thay id bằng username hoặc email, chưa xong
+
         $dataup = [
 
             "email" => $request->email,
@@ -34,6 +33,6 @@ class UpdateController extends Controller
         $user = User::where(['id' => $id])->update($dataup);
         // dd($user);
 
-        return view('update');
+        return view('home.index');
     }
 }

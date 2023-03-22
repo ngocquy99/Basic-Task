@@ -1,5 +1,9 @@
+<!-- @extends('layouts.app-master')
+
+@section('content')
+
 <h1> Update By ID </h1>
-    <form method="post" action="{{ route('update.perform') }}">
+    <form method="post" action="{{ route('update.preform') }}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <input class="form-control" name="id" value="{{ old('id') }}" placeholder="ID" required="required" autofocus>
@@ -74,3 +78,5 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
+
+@endsection -->
