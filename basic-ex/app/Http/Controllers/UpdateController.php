@@ -34,6 +34,6 @@ class UpdateController extends Controller
         $user = User::where(['id' => $id])->update($dataup);
         // dd($user);
 
-        return view('home.index');
+        return view('update');
     }
 }

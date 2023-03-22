@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index() 
     {
-        $users = User::where('id', '>=', '1')->get();
-        return view('home.index',['users'=>$users]);
+        // $users = User::where('id', '>=', '1')->get();
+        // return view('home.index',['users'=>$users]);
 
         return view('home.index');
     }

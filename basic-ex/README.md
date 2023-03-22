@@ -105,10 +105,9 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 -- Yêu cầu những chức năng cần thêm -- 
 
-trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  --- LÀM CÁI NÀY, CHƯA XONG
-tạo controller riêng cho user page lấy thông tin từ database user tạo ra bảng
+trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  LÀM CÁI NÀY TIẾP THEO
 tìm kiếm được user
-tạo view riêng cho update và bảng user
+tạo view riêng cho update 
 FIX password hoặc username hoặc email sau khi update không thể login được
 
 
@@ -127,4 +126,6 @@ name sau khi update chưa hiện lên myAdmin, fix đi  --- done
 add boostrap  --- done
 sau khi update thành công redirect sang dashboard  --- done
 tạo thêm update authen điều kiện khi update như là mật khẩu 8 số, ....  --- done
+tạo controller view riêng cho user page lấy thông tin từ database user tạo ra bảng   ---  done
+
 

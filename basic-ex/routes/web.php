@@ -46,9 +46,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     });
 
     // Route::post('/update','RegisterController@show')->name('register.show');
-    Route::post('/register', [RegisterController::class, 'register'])->name('register.perform');
-    Route::post('/update', 'UpdateController@update')->name('update.perform');
+    Route::post('/register', 'RegisterController@register')->name('register.perform');
+    Route::get('/update', 'UpdateController@update')->name('update.perform');
 
+
+    /**
+     * User table 
+     */
+    Route::get('/table', 'UsertableController@table')->name('table.show');
     
 
 
