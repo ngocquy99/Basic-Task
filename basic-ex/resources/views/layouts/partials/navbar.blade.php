@@ -13,7 +13,7 @@
       </ul>
 
               <form class="col-20 col-lg-auto mb-3 mb-lg-0 me-lg-3" >
-                <input type="search" class="form-control form-control-dark" placeholder="Search ..." aria-label="Search">
+                <input href="{{ route('users.search') }}" type="search" name="search" class="form-control form-control-dark" placeholder="Search ..." aria-label="Search">
               </form>
 
               @auth

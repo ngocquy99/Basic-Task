@@ -105,16 +105,19 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 -- Yêu cầu những chức năng cần thêm -- 
 
-trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  LÀM CÁI NÀY TIẾP THEO
-tìm kiếm được user
+trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
+tìm kiếm được user ( link bài đang theo : https://www.educative.io/answers/how-to-implement-search-in-laravel) --- chưa xong, đang lỗi
 tạo view riêng cho update ( đã tạo xong view, controller nhưng chưa hiện ra được qua url, chưa xong )  --- đang làm cái này, chưa xong
 FIX password hoặc username hoặc email sau khi update không thể login được
-thêm thông tin cho about trong navbar
+sửa quê quán place of birth của register và update sang datalist form control bootstrap ( link : https://getbootstrap.com/docs/5.0/forms/form-control/ )
+
+
 
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
-thêm nút để đi đến trang update và user management sau này
+thêm nút để đi đến trang update sau khi đã tạo view riêng
+thêm thông tin cho about trong navbar
 
 
 
@@ -129,5 +132,13 @@ add boostrap  --- done
 sau khi update thành công redirect sang dashboard  --- done
 tạo thêm update authen điều kiện khi update như là mật khẩu 8 số, ....  --- done
 tạo controller view riêng cho user page lấy thông tin từ database user tạo ra bảng   ---  done
+thêm nút đi đến trang all users table và home  --- done
+
+
+
+
+
+
+
 
 

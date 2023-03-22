@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,11 +51,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::post('/update', 'UpdateController@update')->name('update.preform');
     });
 
-
-
-
     /**
      * User table Route
      */
     Route::get('/table', 'UsertableController@table')->name('table.show');
+
+    Route::get('/', 'SearchController@search')->name('users.search');
 });
