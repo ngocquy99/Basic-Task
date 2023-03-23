@@ -67,6 +67,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 -- KIEN THUC --
 
 composer install : sau khi clone can intsall composer de lay libary
@@ -83,12 +94,12 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 route : tao ra 1 duong dan url
 post : phuong thuc (get,....)
 /register : url dat ten cho route
-RegisterController::class : controller (thuc hien cau lenh hoac logic )
+RegisterController::class : controller (thuc hien cau lenh hoac logic trong controller )
 	- 1 controller co the chua nhieu function
 	- 
 'register': function thuoc controller , function nay chua nhung logic cua controller
 	- update(Request $request){}
-		- reuqets : yeu cau 
+		- request : yeu cau 
 ->name('register.perform'): ten viet tat cua route 
 
 neu variable bi undefined xem da hien thi dung view chua
@@ -114,9 +125,9 @@ them de test push
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
 tìm kiếm được user ( link bài đang theo : https://www.educative.io/answers/how-to-implement-search-in-laravel) --- chưa xong, đang lỗi, đã có search controller, route nhưng chưa xong
-tạo view riêng cho update ( đã tạo xong view, controller nhưng chưa hiện ra được qua url, chưa xong )  --- đang làm cái này, chưa xong
-FIX password hoặc username hoặc email sau khi update không thể login được  --- ĐANG LÀM CÁI NÀY
+FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
 Cronjob gửi message 
+check cách display username trên navbar
 
 
 yêu cầu add-on :
@@ -124,6 +135,9 @@ user đã register và login chỉ được fix và update thông tin của mìn
 thêm nút để đi đến trang update sau khi đã tạo view riêng
 thêm thông tin cho about trong navbar
 
+
+--  THẮC MẮC -- 
+logincontroller có authenticated thì sau update có cần có   ??????
 
 
 -- DONE -- 
@@ -141,6 +155,11 @@ tạo controller view riêng cho user page lấy thông tin từ database user t
 thêm nút đi đến trang all users table và home  --- done
 sửa quê quán place of birth của register sang datalist form control bootstrap  --- done
 search user function  --- done
+tạo view riêng cho update  --- done
+thêm nút để đi đến trang update sau khi đã tạo view riêng   --- done
+
+
+
 
 
 

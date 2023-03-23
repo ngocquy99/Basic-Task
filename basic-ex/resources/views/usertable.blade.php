@@ -1,6 +1,8 @@
 @extends('layouts.app-master')
 
 @section('content')
+<div style="padding-bottom: 15px;"></div>
+
 <h1>User Imformation</h1>
 
 <form action="{{ route('users.search') }}" method="GET" >

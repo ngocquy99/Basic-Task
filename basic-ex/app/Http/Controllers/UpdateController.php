@@ -10,15 +10,15 @@ use App\Http\Requests\UpdateRequest;
 class UpdateController extends Controller
 {
 
-    // /**
-    //  * Display UPDATE page.
-    //  * 
-    //  * @return Renderable
-    //  */
-    // public function show()
-    // {
-    //     return view('update');
-    // }
+    /**
+     * Display UPDATE page.
+     * 
+     * @return Renderable
+     */
+    public function show()
+    {
+        return view('update');
+    }
 
     /**
      * Handle update request

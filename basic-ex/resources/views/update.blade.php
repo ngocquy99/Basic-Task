@@ -1,6 +1,8 @@
-<!-- @extends('layouts.app-master')
+@extends('layouts.app-master')
 
 @section('content')
+
+<div style="padding-bottom: 15px;"></div>
 
 <h1> Update By ID </h1>
     <form method="post" action="{{ route('update.preform') }}">
@@ -79,4 +81,4 @@
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
 
-@endsection -->
+@endsection
