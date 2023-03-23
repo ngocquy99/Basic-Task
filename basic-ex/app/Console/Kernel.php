@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        // 'App\Console\Commands\PostCommand'
+        'App\Console\Commands\DemoCron'
     ];
     /**
      * Define the application's command schedule.
@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule ->command('post:create')->everyMinute();
+        $schedule ->command('demo:cron')->everyMinute()->withoutOverlapping();
         
     }
 

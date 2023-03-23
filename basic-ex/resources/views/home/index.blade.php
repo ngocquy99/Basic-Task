@@ -7,7 +7,6 @@
     <p class="lead">Only authenticated users can access this section.</p>
 
     <hr>
-    
         @include('auth.partials.copy')
     </form>
     @endauth

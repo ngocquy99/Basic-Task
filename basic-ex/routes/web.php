@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
@@ -58,4 +59,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     });
 
     Route::get('/tabel/search', 'SearchController@search')->name('users.search');
+
+    // Route::get('users', function () {
+    //     $users = DB::table('users')->simplePaginate(15);
+    //     $users->setPath('page');
+    // });
+    
 });

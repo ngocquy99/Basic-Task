@@ -6,7 +6,7 @@
 <h1>User Imformation</h1>
 
 <form action="{{ route('users.search') }}" method="GET" >
-    <input type="search" name="search" value="{{ request('search') }}" class="form-control form-control-dark" placeholder="Search ..." aria-label="Search">
+    <input type="search" name="search" value="{{ request('search') }}" class="form-control form-control-dark" placeholder="Search By Username" aria-label="Search">
 </form>
 
 <table class="table table-striped" action="{{ route('table.show') }}">
@@ -32,13 +32,12 @@
         </tr>
             @endforeach
     </tbody>
+    <!-- {!! $users->fragment('foo')->links() !!} -->
+
 </table>
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center ">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
     </ul>
 </nav>

@@ -112,28 +112,31 @@ $users : bien lay ra thong tin tu bang User theo dieu kien tim kiem
 overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) dan den duong truyen dan route, route se tro den controller
 
 
-them de test push
-them de test push
-them de test push
-them de test push
-them de test push
-
-
 
 
 -- Yêu cầu những chức năng cần thêm -- 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
-tìm kiếm được user ( link bài đang theo : https://www.educative.io/answers/how-to-implement-search-in-laravel) --- chưa xong, đang lỗi, đã có search controller, route nhưng chưa xong
 FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
+paginate trang user table  ---  đã paginate số bảng ghi là 15, nhưng chưa dùng được users->link và chưa add link vào nút pre và next
+
+
+Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://blog.haposoft.com/tim-hieu-ve-task-scheduling-trong-laravel/ )
+hiện ra flash message hay alert  ( alert :https://dev.to/shanisingh03/laravel-alert-messages-b86     https://getbootstrap.com/docs/4.0/components/alerts/ )
+  ( flash message :https://www.itsolutionstuff.com/post/laravel-5-implement-flash-messages-with-exampleexample.html)
+
+
 Cronjob gửi message 
-check cách display username trên navbar
+
 
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 thêm nút để đi đến trang update sau khi đã tạo view riêng
 thêm thông tin cho about trong navbar
+check cách display username trên navbar
+
+
 
 
 --  THẮC MẮC -- 

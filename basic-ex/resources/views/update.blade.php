@@ -14,7 +14,7 @@
 
         <div class="form-group form-floating mb-3">
             <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="name@example.com" required="required" autofocus>
-            <label for="floatingEmail">Email address</label>
+            <label for="floatingEmail">Email Address</label>
             @if ($errors->has('email'))
             <span class="text-danger text-left">{{ $errors->first('email') }}</span>
             @endif
