@@ -10,12 +10,12 @@ class SearchController extends Controller
 {
     public function search(){
         // Check for search input
-        // if (request('search')) {
-        //     $users = User::where('username', 'like', '%' . request('search') . '%')->get();
-        // } else {
-        //     $users = User::all();
-        // }
+        if (request('search')) {
+            $users = User::where('username', 'like', '%' . request('search') . '%')->get();
+        } else {
+            $users = User::all();
+        }
     
-        // return view('layouts/partials/navbar')->with('users', $users);
+        return view('usertable')->with('users', $users);
     }
 }

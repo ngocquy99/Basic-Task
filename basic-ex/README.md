@@ -115,13 +115,8 @@ them de test push
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
 tìm kiếm được user ( link bài đang theo : https://www.educative.io/answers/how-to-implement-search-in-laravel) --- chưa xong, đang lỗi, đã có search controller, route nhưng chưa xong
 tạo view riêng cho update ( đã tạo xong view, controller nhưng chưa hiện ra được qua url, chưa xong )  --- đang làm cái này, chưa xong
-FIX password hoặc username hoặc email sau khi update không thể login được
-
-
-search user function research link :
-https://viblo.asia/p/toi-uu-code-voi-advance-search-trong-laravel-gDVK26AeKLj
-https://www.educative.io/answers/how-to-implement-search-in-laravel
-
+FIX password hoặc username hoặc email sau khi update không thể login được  --- ĐANG LÀM CÁI NÀY
+Cronjob gửi message 
 
 
 yêu cầu add-on :
@@ -145,6 +140,7 @@ tạo thêm update authen điều kiện khi update như là mật khẩu 8 số
 tạo controller view riêng cho user page lấy thông tin từ database user tạo ra bảng   ---  done
 thêm nút đi đến trang all users table và home  --- done
 sửa quê quán place of birth của register sang datalist form control bootstrap  --- done
+search user function  --- done
 
 
 

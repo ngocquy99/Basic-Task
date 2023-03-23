@@ -47,13 +47,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         /**
          * Update Route
          */
+        // Route::get('/update', 'UpdateController@update')->name('update.show');
         Route::post('/update', 'UpdateController@update')->name('update.preform');
+
+        /**
+         * User table Route
+         */
+        Route::get('/table', 'UsertableController@table')->name('table.show');
     });
 
-    /**
-     * User table Route
-     */
-    Route::get('/table', 'UsertableController@table')->name('table.show');
-
-    // Route::get('/', 'SearchController@search')->name('users.search');
+    Route::get('/tabel/search', 'SearchController@search')->name('users.search');
 });

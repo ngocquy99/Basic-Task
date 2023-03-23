@@ -2,6 +2,11 @@
 
 @section('content')
 <h1>User Imformation</h1>
+
+<form action="{{ route('users.search') }}" method="GET" >
+    <input type="search" name="search" value="{{ request('search') }}" class="form-control form-control-dark" placeholder="Search ..." aria-label="Search">
+</form>
+
 <table class="table table-striped" action="{{ route('table.show') }}">
     <thead>
         <tr>
@@ -17,13 +22,13 @@
         <tr>
             @foreach ($users as $key => $user)
             <th scope="row">{{$key+1}}</th>
-            <td>{{$user->id}}</td>
+            <td >{{$user->id}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->username}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->gender}}</td>
         </tr>
-        @endforeach
+            @endforeach
     </tbody>
 </table>
 <nav aria-label="Page navigation example">

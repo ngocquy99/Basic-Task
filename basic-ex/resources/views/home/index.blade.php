@@ -65,7 +65,7 @@
 
         <div class="form-group form-floating mb-3">
             <select class="form-select" aria-label="Default select example" name="gender" value="{{ old('gender') }}" placeholder="Gender" required="required">
-            <label for="floatingGender"> <option selected>Gender</option></label>
+            <label for="floatingGender"><option selected>Gender</option></label>
             @if ($errors->has('gender'))
             <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
             @endif

@@ -9,6 +9,17 @@ use App\Http\Requests\UpdateRequest;
 
 class UpdateController extends Controller
 {
+
+    // /**
+    //  * Display UPDATE page.
+    //  * 
+    //  * @return Renderable
+    //  */
+    // public function show()
+    // {
+    //     return view('update');
+    // }
+
     /**
      * Handle update request
      * 
@@ -32,6 +43,6 @@ class UpdateController extends Controller
         $user = User::where(['id' => $id])->update($dataup);
         // dd($user);
 
-        return view('home.index');
+        return view('update');
     }
 }
