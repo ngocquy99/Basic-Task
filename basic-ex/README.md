@@ -121,9 +121,8 @@ FIX password hoặc username hoặc email sau khi update không thể login đư
 paginate trang user table  ---  đã paginate số bảng ghi là 15, nhưng chưa dùng được users->link và chưa add link vào nút pre và next
 
 
-Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://blog.haposoft.com/tim-hieu-ve-task-scheduling-trong-laravel/ )
-hiện ra flash message hay alert  ( alert :https://dev.to/shanisingh03/laravel-alert-messages-b86     https://getbootstrap.com/docs/4.0/components/alerts/ )
-  ( flash message :https://www.itsolutionstuff.com/post/laravel-5-implement-flash-messages-with-exampleexample.html)
+Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://laravel.com/docs/9.x/mail#sending-mail )
+
 
 
 Cronjob gửi message 

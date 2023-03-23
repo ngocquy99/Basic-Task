@@ -18,4 +18,13 @@ class SearchController extends Controller
     
         return view('usertable')->with('users', $users);
     }
+
+
+    public function edit (Request $request)
+    {
+
+        $userId = $request->id;
+        $userInfo = User::where('id',$userId)->first();
+        return view('edit')->with('info', $userInfo);
+    }
 }

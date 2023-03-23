@@ -29,17 +29,18 @@
             <td>{{$user->username}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->gender}}</td>
+            <td> <a href="/user-edit?id={{$user->id}}"> upadte</a></td>
         </tr>
             @endforeach
-    </tbody>
-    <!-- {!! $users->fragment('foo')->links() !!} -->
-
+    </tbody> 
 </table>
 <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center ">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
+    
+{{ $users->links() }}
+<br>
+{{ $users->onEachSide(5)->links() }}
+   
+ 
 </nav>
 
 @endsection

@@ -60,6 +60,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     Route::get('/tabel/search', 'SearchController@search')->name('users.search');
 
+    Route::get('/user-edit', 'SearchController@edit')->name('users.edit');
+
+
+
     // Route::get('users', function () {
     //     $users = DB::table('users')->simplePaginate(15);
     //     $users->setPath('page');

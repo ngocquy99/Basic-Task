@@ -29,20 +29,17 @@ class UpdateController extends Controller
 
         $id = $request->id;
         //thay id bằng username hoặc email, chưa xong
-
         $dataup = [
             "email" => $request->email,
             "name"  => $request->name,
             "username" => $request->username,
             "password" => $request->password,
-            "phonenumber" => $request->phonenumber,
+            "phone_number" => $request->phonenumber,
             "gender" => $request->gender,
-            "placeofbirth" => $request->placeofbirth,
+            "place_of_birth" => $request->placeofbirth,
         ];
         
         $user = User::where(['id' => $id])->update($dataup);
-        // dd($user);
-
-        return view('update');
+        return view('usertable');
     }
 }

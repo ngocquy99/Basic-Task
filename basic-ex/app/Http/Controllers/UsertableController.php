@@ -13,7 +13,7 @@ class UsertableController extends Controller
     public function table()
     {
         $users = User::where('id', '>=', '1')->get();
-        $users = DB::table('users')->simplePaginate(15);
+        $users = DB::table('users')->simplePaginate(5);
 
 
         return view('usertable',['users'=>$users]);
