@@ -47,7 +47,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         /**
          * Update Route
          */
-        Route::post('/update', 'UpdateController@show')->name('update.show');
         Route::post('/update', 'UpdateController@update')->name('update.preform');
     });
 
@@ -56,5 +55,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
      */
     Route::get('/table', 'UsertableController@table')->name('table.show');
 
-    Route::get('/', 'SearchController@search')->name('users.search');
+    // Route::get('/', 'SearchController@search')->name('users.search');
 });

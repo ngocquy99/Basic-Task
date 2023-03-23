@@ -20,7 +20,6 @@ class UpdateController extends Controller
         //thay id bằng username hoặc email, chưa xong
 
         $dataup = [
-
             "email" => $request->email,
             "name"  => $request->name,
             "username" => $request->username,
@@ -31,8 +30,8 @@ class UpdateController extends Controller
         ];
         
         $user = User::where(['id' => $id])->update($dataup);
-        dd($user);
+        // dd($user);
 
-        // return view('home.index');
+        return view('home.index');
     }
 }
