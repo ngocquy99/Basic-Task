@@ -39,9 +39,9 @@ class DemoCron extends Command
     public function handle()
     {
         DB::table('users')->insert([
-            'name' => 'bai viet 1',
-            'username' => 'Noi dung cua bai viet',
-            'email' => 'emailtestcron@gmail.com',
+            'name' => 'bai viet 2',
+            'username' => 'Noi dung cua bai viet 2',
+            'email' => 'emailtestcro2n@gmail.com',
             'password' => '11111111'
         ]);
         $this -> info('Demo:cron run successfuly');

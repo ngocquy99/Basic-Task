@@ -114,17 +114,24 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 
 
+
+
 -- Yêu cầu những chức năng cần thêm -- 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
 FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
-
+tạo nút cho send email-test ????
 
 updateController
 $user = User::where('id',$id)->update($dataup);
         return view('update'); 
 		                                        chuyển view đi sang usertable
 
+
+https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R link viblo cronnjob
+https://stackoverflow.com/questions/56507216/laravel-send-email-error-failed-loading-cafile-stream     bỏ
+https://www.linode.com/community/questions/22139/no-valid-certs-found-for-cafile-stream-doing-fopen-but-ssl-works    bỏ
+https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R    bỏ
 
 fix $users undefined
 fix Collection::links does not exist. usertable.blade
