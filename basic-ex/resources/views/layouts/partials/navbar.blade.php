@@ -14,9 +14,6 @@
         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
       </ul>
 
-              <!-- <form class="col-20 col-lg-auto mb-3 mb-lg-0 me-lg-3" >
-                <input type="search" name="search" class="form-control form-control-dark" placeholder="Search ..." aria-label="Search">
-              </form> -->
 
               @auth
               {{auth()->user()->name}}

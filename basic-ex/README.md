@@ -118,7 +118,18 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
 FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
-paginate trang user table  ---  đã paginate số bảng ghi là 15, nhưng chưa dùng được users->link và chưa add link vào nút pre và next
+
+
+updateController
+$user = User::where('id',$id)->update($dataup);
+        return view('update'); 
+		                                        chuyển view đi sang usertable
+
+
+fix $users undefined
+fix Collection::links does not exist. usertable.blade
+fix khi search trong user inform bi loi colection user-> link 
+
 
 
 Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://laravel.com/docs/9.x/mail#sending-mail )
@@ -131,15 +142,15 @@ Cronjob gửi message
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
-thêm nút để đi đến trang update sau khi đã tạo view riêng
-thêm thông tin cho about trong navbar
-check cách display username trên navbar
+
 
 
 
 
 --  THẮC MẮC -- 
 logincontroller có authenticated thì sau update có cần có   ??????
+
+ $userInfo = User::where('id',$userId)->first();   hỏi lạ đoạn này  where('id',$userId)
 
 
 -- DONE -- 
@@ -159,6 +170,12 @@ sửa quê quán place of birth của register sang datalist form control bootst
 search user function  --- done
 tạo view riêng cho update  --- done
 thêm nút để đi đến trang update sau khi đã tạo view riêng   --- done
+chuyển edit trong searchController sang controller riêng  --- done
+paginate trang user table, có số trang   --- done
+thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  done
+
+
+
 
 
 

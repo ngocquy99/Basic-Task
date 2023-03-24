@@ -34,12 +34,12 @@ class UpdateController extends Controller
             "name"  => $request->name,
             "username" => $request->username,
             "password" => $request->password,
-            "phone_number" => $request->phonenumber,
+            "phonenumber" => $request->phonenumber,
             "gender" => $request->gender,
-            "place_of_birth" => $request->placeofbirth,
+            "placeofbirth" => $request->placeofbirth,
         ];
         
-        $user = User::where(['id' => $id])->update($dataup);
-        return view('usertable');
+        $user = User::where('id',$id)->update($dataup);
+        return view('home.index'); 
     }
 }

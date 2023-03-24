@@ -56,17 +56,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
          * User table Route
          */
         Route::get('/table', 'UsertableController@table')->name('table.show');
+        Route::get('/tabel/search', 'SearchController@search')->name('users.search');
+
+        Route::get('/user-edit', 'EditController@edit')->name('users.edit');
     });
 
-    Route::get('/tabel/search', 'SearchController@search')->name('users.search');
-
-    Route::get('/user-edit', 'SearchController@edit')->name('users.edit');
-
-
-
-    // Route::get('users', function () {
-    //     $users = DB::table('users')->simplePaginate(15);
-    //     $users->setPath('page');
-    // });
-    
+    Route::get('/email-test', 'MailController@sendMail')->name('email.test');
 });

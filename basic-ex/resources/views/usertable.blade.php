@@ -18,6 +18,7 @@
             <th scope="col">Username</th>
             <th scope="col">Email</th>
             <th scope="col">Gender</th>
+            <th scope="col">Update</th>
         </tr>
     </thead>
     <tbody>
@@ -29,18 +30,14 @@
             <td>{{$user->username}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->gender}}</td>
-            <td> <a href="/user-edit?id={{$user->id}}"> upadte</a></td>
+            <td><a href="/user-edit?id={{$user->id}}"class="text-decoration-none text-white btn btn-primary">Update</a></td>
         </tr>
             @endforeach
     </tbody> 
-</table>
-<nav aria-label="Page navigation example">
-    
-{{ $users->links() }}
-<br>
-{{ $users->onEachSide(5)->links() }}
+</table>    
+<nav>
+{{ $users->onEachSide(15)->links() }}
+</nav>
    
  
-</nav>
-
 @endsection

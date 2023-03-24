@@ -3,7 +3,6 @@
 @section('content')
 
 
-
 <div style="padding-bottom: 15px;"></div>
 
 <h1> Update By ID : {{$info->id}} </h1>
