@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use Commands\DemoCron;
 use App\Jobs\SendEmailJob;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +17,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\DemoCron'
+        Commands\DemoCron::class,
     ];
     /**
      * Define the application's command schedule.
