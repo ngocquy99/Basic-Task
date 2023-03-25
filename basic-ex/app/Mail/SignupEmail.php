@@ -12,6 +12,8 @@ class SignupEmail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
+    private $name;
+    private $email;
 
     /**
      * Create a new message instance.
@@ -20,7 +22,8 @@ class SignupEmail extends Mailable
      */
     public function __construct($data)
     {
-        $this->data=$data; 
+        $this->name =$data['name']; 
+        $this->email =$data['email']; 
     }
 
     /**
@@ -30,6 +33,11 @@ class SignupEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(address:'ngocquy1619@gmail.com', name:'Ngọc Qúy')->subject('Hello and Welcome !!')->view('mail.signup-email',['mail.data' => $this->data ]);
+        return $this->from(address:"ngocquy1619@gmail.com", name: $this->name)
+        ->subject('Hello and Welcome !!')
+        ->view('mail.signup-email',[
+            'name' => $this->name,
+            'email' => $this->email,
+         ]);
     }
 }

@@ -2,8 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\SignupEmail;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class DemoCron extends Command
 {
@@ -38,12 +41,25 @@ class DemoCron extends Command
      */
     public function handle()
     {
-        DB::table('users')->insert([
-            'name' => 'bai viet 2',
-            'username' => 'Noi dung cua bai viet 2',
-            'email' => 'emailtestcro2n@gmail.com',
-            'password' => '11111111'
-        ]);
+        $this->__SendingEmail();
         $this -> info('Demo:cron run successfuly');
+
+    }
+
+
+    public function __SendingEmail()
+    {
+       
+        $listUser = User::all();
+        foreach($listUser as $user ){
+            $email = $user->email ;
+            $name = $user->name ;
+            $data = [
+                'name' => $name, 
+                'email' => $email,
+            ];
+            Mail::to(users: $email )->send(new SignupEmail($data));
+        }
+       
     }
 }

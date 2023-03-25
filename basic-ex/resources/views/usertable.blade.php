@@ -36,7 +36,7 @@
     </tbody> 
 </table>    
 <nav>
-{{ $users->onEachSide(15)->links() }}
+{{ $users->links() }}
 </nav>
    
  

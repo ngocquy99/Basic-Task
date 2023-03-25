@@ -42,4 +42,15 @@ class UpdateController extends Controller
         $user = User::where('id',$id)->update($dataup);
         return view('home.index'); 
     }
+
+
+    public function accessEmail(Request $request)
+    {
+        $email = $request->email;
+        $dataup = [
+            "email_verified_at" => 1,
+        ];
+        $rowudate = User::where('email',$email)->update($dataup);
+        return view('home.access'); 
+    }
 }

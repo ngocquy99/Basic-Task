@@ -10,12 +10,12 @@ class SearchController extends Controller
 {
     public function search(){
         // Check for search input
+        $limit = 5;
         if (request('search')) {
-            $user = User::where('username', 'like', '%' . request('search') . '%')->get();
+            $user = User::where('username', 'like', '%' . request('search') . '%')->paginate($limit);
         } else {
-            $user = User::all();
-        }
-    
+            $user = User::paginate($limit );
+        }   
         return view('usertable')->with('users', $user);
     }
 
