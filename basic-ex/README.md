@@ -193,6 +193,7 @@ thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  d
 
 
 
+<!-- ajax vs fetch -->
 
 
 
