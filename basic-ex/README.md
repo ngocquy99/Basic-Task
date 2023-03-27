@@ -118,12 +118,10 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 -- Yêu cầu những chức năng cần thêm -- 
 
-FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
+FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men  -> chuyển kiểu dữ liệu của password sau update từ int lại sang password ( hoặc chuyển lại password trong register từ password thành int ( chắc sẽ không làm ))
 
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
-
-sửa lỗi sau login trang homepage dashboard bị redirect sang trang homepage check access
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
@@ -161,6 +159,8 @@ thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  d
 Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được   --- done
 thay pagination 5 sang 10   --- done
 Cronjob gửi message xin chào người dùng (thêm nội dung vào tin nhắn) còn mail gửi user access login để đơn giản, xin chào và link acccess là oke   --- done
+sửa lỗi sau login trang homepage dashboard bị redirect sang trang homepage check access   --- done
+
 
 
 

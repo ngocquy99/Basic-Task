@@ -65,5 +65,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/user-access-mail', 'UpdateController@accessEmail');
     Route::get('/email-test', 'MailController@sendMail')->name('email.test');
 
- Route::get('/noti','LoginController@loginNoti');
+    Route::get('/noti', 'LoginController@loginNoti');
 });

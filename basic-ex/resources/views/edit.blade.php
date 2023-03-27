@@ -5,7 +5,7 @@
 
 <div style="padding-bottom: 15px;"></div>
 
-<h1> Update By ID : {{$info->id}} </h1>
+<h1> Update By User {{$info->username}}'s ID : {{$info->id}} </h1>
     <form method="post" action="{{ route('update.preform') }}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
