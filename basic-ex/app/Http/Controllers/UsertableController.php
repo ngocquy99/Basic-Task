@@ -13,7 +13,7 @@ class UsertableController extends Controller
     public function table()
     {
       
-        $users = User::paginate(5);
+        $users = User::paginate(10);
 
         return view('usertable',['users'=>$users]);
     }

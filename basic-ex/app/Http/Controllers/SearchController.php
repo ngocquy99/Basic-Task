@@ -10,7 +10,7 @@ class SearchController extends Controller
 {
     public function search(){
         // Check for search input
-        $limit = 5;
+        $limit = 10;
         if (request('search')) {
             $user = User::where('username', 'like', '%' . request('search') . '%')->paginate($limit);
         } else {

@@ -126,7 +126,7 @@ $user = User::where('id',$id)->update($dataup);
 		                                        chuyển view đi sang usertable
 
 
-Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được
+thay pagination 5 sang 10
 
 
 https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R link viblo cronnjob
@@ -177,6 +177,8 @@ thêm nút để đi đến trang update sau khi đã tạo view riêng   --- do
 chuyển edit trong searchController sang controller riêng  --- done
 paginate trang user table, có số trang   --- done
 thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  done
+Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được   --- done
+
 
 
 
