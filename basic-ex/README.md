@@ -120,22 +120,10 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
 
+thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 
-https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R link viblo cronnjob
-
-
-
-
-
-
-Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://laravel.com/docs/9.x/mail#sending-mail )
-
-
-
-Cronjob gửi message 
-
-
+sửa lỗi sau login trang homepage dashboard bị redirect sang trang homepage check access
 
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
@@ -172,7 +160,8 @@ paginate trang user table, có số trang   --- done
 thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  done
 Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được   --- done
 thay pagination 5 sang 10   --- done
-Cronjob gửi message xin chào người dùng (thêm nội dung vào tin nhắn) còn mail gửi user để đơn giản, xin chào và link acccess là oke   --- done
+Cronjob gửi message xin chào người dùng (thêm nội dung vào tin nhắn) còn mail gửi user access login để đơn giản, xin chào và link acccess là oke   --- done
+
 
 
 

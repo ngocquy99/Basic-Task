@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\HelloEmail;
 use App\Mail\SignupEmail;
 use App\Models\User;
 use Illuminate\Console\Command;
@@ -22,7 +23,7 @@ class DemoCron extends Command
      *
      * @var string
      */
-    protected $description = 'send email to user';
+    protected $description = 'send hello email to user';
 
     /**
      * Create a new command instance.
@@ -54,11 +55,11 @@ class DemoCron extends Command
         foreach($listUser as $user ){
             $email = $user->email ;
             $username = $user->username ;
-            $data = [
+            $data2 = [
                 'username' => $username, 
                 'email' => $email,
             ];
-            Mail::to(users: $email )->send(new SignupEmail($data));
+            Mail::to(users: $email )->send(new HelloEmail($data2));
         }
        
     }
