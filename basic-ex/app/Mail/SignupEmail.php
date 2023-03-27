@@ -35,7 +35,7 @@ class SignupEmail extends Mailable
     {
         return $this->from(address:"ngocquy1619@gmail.com", name: $this->username)
         ->subject('Hello and Welcome !!')
-        ->view('mail.signup-email',[
+        ->view('mail.hello-email',[
             'username' => $this->username,
             'email' => $this->email,
          ]);

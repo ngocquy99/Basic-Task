@@ -22,7 +22,7 @@ class DemoCron extends Command
      *
      * @var string
      */
-    protected $description = 'add user';
+    protected $description = 'send email to user';
 
     /**
      * Create a new command instance.

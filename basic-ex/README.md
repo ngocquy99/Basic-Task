@@ -120,13 +120,6 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
 
-updateController
-$user = User::where('id',$id)->update($dataup);
-        return view('update'); 
-		                                        chuyển view đi sang usertable
-
-
-thay pagination 5 sang 10
 
 
 https://viblo.asia/p/tim-hieu-tao-cron-job-trong-laravel-63vKjaYM52R link viblo cronnjob
@@ -178,10 +171,8 @@ chuyển edit trong searchController sang controller riêng  --- done
 paginate trang user table, có số trang   --- done
 thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  done
 Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được   --- done
-
-
-
-
+thay pagination 5 sang 10   --- done
+Cronjob gửi message xin chào người dùng (thêm nội dung vào tin nhắn) còn mail gửi user để đơn giản, xin chào và link acccess là oke   --- done
 
 
 
