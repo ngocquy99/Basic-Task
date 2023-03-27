@@ -53,9 +53,9 @@ class DemoCron extends Command
         $listUser = User::all();
         foreach($listUser as $user ){
             $email = $user->email ;
-            $name = $user->name ;
+            $username = $user->username ;
             $data = [
-                'name' => $name, 
+                'username' => $username, 
                 'email' => $email,
             ];
             Mail::to(users: $email )->send(new SignupEmail($data));

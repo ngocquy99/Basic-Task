@@ -8,6 +8,6 @@
     <p>Check mail for access</p>
 
 </div>
-
+    
 
 @endsection

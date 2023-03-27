@@ -12,7 +12,7 @@ class SignupEmail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
-    private $name;
+    private $username;
     private $email;
 
     /**
@@ -22,7 +22,7 @@ class SignupEmail extends Mailable
      */
     public function __construct($data)
     {
-        $this->name =$data['name']; 
+        $this->username =$data['username']; 
         $this->email =$data['email']; 
     }
 
@@ -33,10 +33,10 @@ class SignupEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(address:"ngocquy1619@gmail.com", name: $this->name)
+        return $this->from(address:"ngocquy1619@gmail.com", name: $this->username)
         ->subject('Hello and Welcome !!')
         ->view('mail.signup-email',[
-            'name' => $this->name,
+            'username' => $this->username,
             'email' => $this->email,
          ]);
     }

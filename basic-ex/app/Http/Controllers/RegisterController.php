@@ -31,21 +31,19 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-        // luu
+        // lưu
         $user = User::create($request->validated());
        
-        // thuc hien lay thong tin de gui mail 
+        // thực hiện lấy thông tin để gửi mail
         if($user){
             $email = $request->email;
             $data = [
-                'name' => $request->name, 
+                'username' => $request->username, 
                 'email' => $request->email,
             ];
             Mail::to(users: $email )->send(new SignupEmail($data));
         }
-       
-
-        return redirect('/');
+        return redirect('noti');
     }
 
 
