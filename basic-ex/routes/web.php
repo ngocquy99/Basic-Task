@@ -49,7 +49,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
          * Update Route
          */
         // Route::get('/update', 'UpdateController@update')->name('update.show');
-        Route::get('/update', 'UpdateController@show')->name('update.show');
+        Route::get('/update' , 'UpdateController@show')->name('update.show');
         Route::post('/update', 'UpdateController@update')->name('update.preform');
 
         /**

@@ -9,7 +9,7 @@
         <h1 class="h3 mb-3 fw-normal">Login</h1>
 
 
-        <div class=" container form-group form-floating mb-3 col-md-4 col-md-offset-5 align-center">
+        <div class=" container form-group form-floating mb-3 col-md-4 col-md-offset-4 align-center">
             <input type="text" class="  form-control  " name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
             <label for="floatingName">Email or Username</label>
             @if ($errors->has('username'))
@@ -17,7 +17,7 @@
             @endif
         </div>
         
-        <div class=" container form-group form-floating mb-3 col-md-4 col-md-offset-5 align-center">
+        <div class=" container form-group form-floating mb-3 col-md-4 col-md-offset-4 align-center">
             <input type="password" class=" form-control  " name="password" value="{{ old('password') }}" placeholder="Password" required="required">
             <label for="floatingPassword">Password</label>
             @if ($errors->has('password'))
