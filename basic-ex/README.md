@@ -81,11 +81,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -- KIEN THUC --
 
 composer install : sau khi clone can intsall composer de lay libary
+.env : tao 1 file moi truong 
+  
+  sau khi clone chạy composser install và tạo .env
 
  \xampp\php\ext\bz2 : error  
 cach fix : https://www.youtube.com/watch?v=xP07_EqywRQ
 
-.env : tao 1 file moi truong 
+ 
 
 [] :mang array
 
