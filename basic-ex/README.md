@@ -117,29 +117,24 @@ overview : tu view hien thi cho khach hang se theo yeu cau (delete, update,...) 
 
 
 
+
+
 -- Yêu cầu những chức năng cần thêm -- 
 
-trong update thay đổi từ yêu cầu id sang yêu cầu email hoặc username  ---  vẫn chưa hoàn thành
-FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men
+FIX password hoặc username hoặc email sau khi update không thể login được  --- chưa làm được men  -> chuyển kiểu dữ liệu của password sau update từ int lại sang password ( hoặc chuyển lại password trong register từ password thành int ( chắc sẽ không làm ))
 
-
-updateController
-$user = User::where('id',$id)->update($dataup);
-        return view('update'); 
-		                                        chuyển view đi sang usertable
-
-
-fix $users undefined
-fix Collection::links does not exist. usertable.blade
-fix khi search trong user inform bi loi colection user-> link 
+thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 
 
-Cronjob    --- ĐANG LÀM CÁI NÀY (link : https://laravel.com/docs/9.x/mail#sending-mail )
+làm basic task list theo hướng dẫn, rồi tự làm rồi làm intermidiate  
+ajax cho trang usertable chuyển trang mới không refresh  --- ĐANG LÀM CÁI NÀY
+build note app dùng laravel
+thử queue function, queue user mới register phải login qua mail access được gửi
+nghiên cứu về job
 
 
-
-Cronjob gửi message 
+ajax pagination : https://www.itsolutionstuff.com/post/laravel-jquery-ajax-pagination-example-from-scratchexample.html
 
 
 
@@ -176,6 +171,10 @@ thêm nút để đi đến trang update sau khi đã tạo view riêng   --- do
 chuyển edit trong searchController sang controller riêng  --- done
 paginate trang user table, có số trang   --- done
 thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  done
+Sau khi register, chuyển sang trang view noti.blade nhưng không có login, bắt buộc phải qua email mới login được   --- done
+thay pagination 5 sang 10   --- done
+Cronjob gửi message xin chào người dùng (thêm nội dung vào tin nhắn) còn mail gửi user access login để đơn giản, xin chào và link acccess là oke   --- done
+sửa lỗi sau login trang homepage dashboard bị redirect sang trang homepage check access   --- done
 
 
 
@@ -188,7 +187,7 @@ thêm nút để đi đến trang update sau khi đã tạo view riêng   ---  d
 
 
 
-
+<!-- ajax vs fetch -->
 
 
 

@@ -14,9 +14,9 @@ class AddMoreinfoToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('phonenumber')->after('password');
-            $table->string ('gender')->after('phonenumber');
-            $table->string ('placeofbirth')->after('gender');
+            $table->integer('phonenumber')->after('password')->default(0);
+            $table->string ('gender')->after('phonenumber')->default(0);
+            $table->string ('placeofbirth')->after('gender')->default(0);
 
         });
     }

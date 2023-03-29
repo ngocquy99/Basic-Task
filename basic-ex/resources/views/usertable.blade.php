@@ -6,10 +6,10 @@
 <h1>User Imformation</h1>
 
 <form action="{{ route('users.search') }}" method="GET" >
-    <input type="search" name="search" value="{{ request('search') }}" class="form-control form-control-dark" placeholder="Search By Username" aria-label="Search">
+    <input id="searchUser" type="search" name="search" value="{{ request('search') }}" class="form-control form-control-dark" placeholder="Search By Username" aria-label="Search">
 </form>
 
-<table class="table table-striped" action="{{ route('table.show') }}">
+<table id="usertable" class="table table-striped" action="{{ route('table.show') }}">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -35,8 +35,8 @@
             @endforeach
     </tbody> 
 </table>    
-<nav>
-{{ $users->onEachSide(15)->links() }}
+<nav id="pagination">
+{{ $users->links() }}
 </nav>
    
  

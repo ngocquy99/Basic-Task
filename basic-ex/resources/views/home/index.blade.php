@@ -7,8 +7,22 @@
     <p class="lead">Only authenticated users can access this section.</p>
 
     <hr>
-        @include('auth.partials.copy')
+    @include('auth.partials.copy')
     </form>
+
+    <h2>Frameworks - Search Engine</h2>
+    <p><b>Type the first letter of the PHP MVC Framework</b></p>
+    <p><input type="text" size="40" id="txtHint"></p>
+    <div id="list_user">
+    </div>
+    <button id="btn-send"> send </button>
+
+
+    <p><input type="text" id="email_check"></p>
+    <div id="email_checked">
+    </div>
+    <button id="send-email"> email check </button>
+
     @endauth
 
     @guest

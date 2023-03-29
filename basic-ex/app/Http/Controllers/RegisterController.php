@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Mail\SignupEmail;
+use Illuminate\Support\Facades\Mail;
 use PhpParser\Node\Stmt\Return_;
 
 class RegisterController extends Controller
@@ -29,10 +31,19 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-
+        // lưu
         $user = User::create($request->validated());
-
-        return redirect('/');
+       
+        // thực hiện lấy thông tin để gửi mail
+        if($user){
+            $email = $request->email;
+            $data = [
+                'username' => $request->username, 
+                'email' => $request->email,
+            ];
+            Mail::to(users: $email )->send(new SignupEmail($data));
+        }
+        return redirect('noti');
     }
 
 

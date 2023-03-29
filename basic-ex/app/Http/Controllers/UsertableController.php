@@ -10,12 +10,15 @@ use App\Http\Controllers\Controller;
 class UsertableController extends Controller
 {
 
-    public function table()
+    public function table(Request $request)
     {
-        $users = User::where('id', '>=', '1')->get();
-        $users = User::paginate(10);
+        $users = User::paginate(15);
 
         return view('usertable',['users'=>$users]);
+         
+        // if ($request->ajax()){
+            // return view('usertable', compact(['users'=>$users]) );
+        // }
     }
 
 }

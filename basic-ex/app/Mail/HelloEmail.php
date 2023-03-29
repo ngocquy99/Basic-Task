@@ -6,12 +6,11 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use mail;
 
-class SignupEmail extends Mailable
+class HelloEmail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+    public $data2;
     private $username;
     private $email;
 
@@ -20,10 +19,10 @@ class SignupEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data2)
     {
-        $this->username =$data['username']; 
-        $this->email =$data['email']; 
+        $this->username =$data2['username']; 
+        $this->email =$data2['email']; 
     }
 
     /**
@@ -35,7 +34,7 @@ class SignupEmail extends Mailable
     {
         return $this->from(address:"ngocquy1619@gmail.com", name: $this->username)
         ->subject('Hello and Welcome !!')
-        ->view('mail.signup-email',[
+        ->view('mail.hello-email',[
             'username' => $this->username,
             'email' => $this->email,
          ]);
