@@ -38,9 +38,9 @@ class UpdateController extends Controller
             "gender" => $request->gender,
             "placeofbirth" => $request->placeofbirth,
         ];
-        
-        $user = User::where('id',$id)->update($dataup);
-        return view('home.index'); 
+
+        $user = User::where('id', $id)->update($dataup);
+        return view('home.index');
     }
 
 
@@ -50,7 +50,43 @@ class UpdateController extends Controller
         $dataup = [
             "email_verified_at" => 1,
         ];
-        $rowudate = User::where('email',$email)->update($dataup);
-        return view('home.access'); 
+        $rowudate = User::where('email', $email)->update($dataup);
+        return view('home.access');
+    }
+
+
+
+
+    public function searchUser(Request $request)
+    {
+        $nameUser = $request->id;
+
+        $output = [
+            'msg' => 'goi thanh cong',
+            'data' => [
+                "name" => $nameUser
+            ]
+        ];
+        return Response($output);
+    }
+    public function emailCheck(Request $request)
+    {
+        $userEmail =  $request->emailcheck;
+
+        $output2 = [
+            'data2' => [
+                'email' => $userEmail
+            ]
+        ];
+        $dataup = [
+
+            "email" => $request->email,
+
+
+        ];
+
+        $user = User::where('email', $userEmail)->update($dataup);
+
+        return Response($userEmail);
     }
 }

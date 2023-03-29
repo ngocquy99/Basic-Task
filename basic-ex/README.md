@@ -123,6 +123,16 @@ FIX password hoặc username hoặc email sau khi update không thể login đư
 thêm sdt, gender, quê quán vào update   --- đã update được, nhưng chưa register thêm được sđt và quê quán vào database
 
 
+
+làm basic task list theo hướng dẫn, rồi tự làm rồi làm intermidiate  --- ĐANG LÀM CÁI NÀY
+ajax cho trang usertable chuyển trang mới không refresh
+build note app dùng laravel
+thử queue function, queue user mới register phải login qua mail access được gửi
+nghiên cứu về job
+
+
+
+
 yêu cầu add-on :
 user đã register và login chỉ được fix và update thông tin của mình
 

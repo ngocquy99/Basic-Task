@@ -1,9 +1,12 @@
 <?php
 
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -18,9 +21,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
-    /**
-     * Home Routes
-     */
+    // home route
     Route::get('/', 'HomeController@index')->name('home.index');
     // Route::post('/register-2', 'RegisterController@register')->name('register.perform');
 
@@ -48,7 +49,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         /**
          * Update Route
          */
-        // Route::get('/update', 'UpdateController@update')->name('update.show');
         Route::get('/update' , 'UpdateController@show')->name('update.show');
         Route::post('/update', 'UpdateController@update')->name('update.preform');
 
@@ -63,7 +63,23 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
 
     Route::get('/user-access-mail', 'UpdateController@accessEmail');
+
     Route::get('/email-test', 'MailController@sendMail')->name('email.test');
 
     Route::get('/noti', 'LoginController@loginNoti');
+
+    Route::POST('/search', 'UpdateController@searchUser');
+
+    Route::POST('/emailcheck', 'UpdateController@emailCheck');
+
+    Route::get('/all-task', function(){
+        $tasks = Task::orderBy('created_at','asc')->get();
+        return view('tasks.task', [
+            'task' => $tasks, 
+        ]);
+    });
+
+
+
+
 });

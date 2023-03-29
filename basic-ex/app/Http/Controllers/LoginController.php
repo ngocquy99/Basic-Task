@@ -29,15 +29,15 @@ class LoginController extends Controller
     {
         $credentials = $request->getCredentials();
 
-        if(!Auth::validate($credentials)){
+        if (!Auth::validate($credentials)) {
             return redirect()->to('login')
-            ->withErrors(trans('auth.failed'));
+                ->withErrors(trans('auth.failed'));
         }
-        
+
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
         Auth::login($user);
 
-        if($user->email_verified_at==null){
+        if ($user->email_verified_at == null) {
             return view('noti');
         }
 
@@ -56,7 +56,7 @@ class LoginController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    protected function authenticated(Request $request, $user) 
+    protected function authenticated(Request $request, $user)
     {
         return redirect()->intended();
     }
