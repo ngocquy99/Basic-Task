@@ -56,16 +56,17 @@ class UpdateController extends Controller
     }
 
 
-
-
     public function searchUser(Request $request)
     {
         $nameUser = $request->id;
-
+        $emailUser = $request->email;
         $output = [
             'msg' => 'goi thanh cong',
             'data' => [
-                "name" => $nameUser
+                "name" => $nameUser,
+                "email" => $emailUser,
+                "email" => $emailUser,
+
             ]
         ];
 
@@ -73,6 +74,7 @@ class UpdateController extends Controller
     }
 
 
+    
 
     public function emailCheck(Request $request)
     {

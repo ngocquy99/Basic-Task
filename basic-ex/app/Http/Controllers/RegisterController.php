@@ -33,18 +33,21 @@ class RegisterController extends Controller
     {
         // lưu
         $user = User::create($request->validated());
-       
+
         // thực hiện lấy thông tin để gửi mail
-        if($user){
+        if ($user) {
             $email = $request->email;
             $data = [
-                'username' => $request->username, 
+                'username' => $request->username,
                 'email' => $request->email,
+                'username' => $request->username,
+                'password' => $request->password,
+                'phonenumber' => $request->phonenumber,
+                'gender' => $request->gender,
+                'placeofbirth' => $request->placeofbirth,
             ];
-            Mail::to(users: $email )->send(new SignupEmail($data));
+            Mail::to(users: $email)->send(new SignupEmail($data));
         }
         return redirect('noti');
     }
-
-
 }

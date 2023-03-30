@@ -16,6 +16,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="{!! url('assets/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 
     <style>
     .bd-placeholder-img {

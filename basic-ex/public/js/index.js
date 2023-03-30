@@ -13,7 +13,14 @@ $(document).on("change", "#txtHint", function () {
 
 // axios dung cho vue js
 
+
+let a = 10
+b = 12 ;
+function add(a,b){
+    return a+b;
+}
 $(document).on("click", "#btn-send", function () {
+    alert (add(a,b));
     $value = $("#txtHint").val();
     let token = $('meta[name="csrf-token"]').attr("content");
     $.ajaxSetup({ headers: { "X-CSRF-TOKEN": token } });
@@ -23,7 +30,8 @@ $(document).on("click", "#btn-send", function () {
         dataType: "json",
         data: {
             search: $value,
-            id: 12,
+            id: 13,
+            email: testgmail.com,
         },
         success: function (rep) {
             $("#list_user").append(rep.data.name + "<br>");
@@ -32,8 +40,18 @@ $(document).on("click", "#btn-send", function () {
         error: function (rep) {
             console.log(rep);
         },
+      
     });
 });
+let counter = 120;
+console.log(typeof(counter)); // "number"
+
+counter = false; 
+console.log(typeof(counter)); // "boolean"
+
+counter = "Hi";
+console.log(typeof(counter)); // "string"
+
 
 $(document).on("click", "#send-email", function () {
     let value2 = $("#email_check").val();
@@ -68,15 +86,15 @@ $(document).on("click", "#searchUser", function () {
         url: "/tabel/search",
         dataType: "json",
         data: {
-            table : value3,
+            table: value3,
         },
         success: function (rep3) {
             // $("#usertable").append(rep3.data3. );
             // console.log(rep3);
-            alert('ajax search');
+            alert("ajax search");
         },
         error: function (rep3) {
-            alert('ajax search');
+            alert("ajax search");
         },
     });
 });
@@ -91,19 +109,29 @@ $(document).on("click", "#pagination", function () {
         url: "/table",
         dataType: "json",
         data: {
-            table : value4,
+            table: value4,
         },
         success: function (rep4) {
             // $("#usertable").append(rep3.data3. );
             // console.log(rep3);
-            alert('pagi success');
+            alert("pagi success");
         },
         error: function (rep4) {
-            alert('pagination not found');
+            alert("pagination not found");
         },
     });
 });
 
-
+$(document).on("click", "#pagination", function () {
+    $value = $("#usertable").val();
+    console.log(value);
+    let token = $('meta[name="csrf-token"]').attr("content");
+    $.ajaxSetup({ header: { "X-CSRF-TOKEN": token } });
+    $.ajax({
+        type: "GET",
+        url :"search",
+        dataType : "json",
+    });
+});
 
 // fetch

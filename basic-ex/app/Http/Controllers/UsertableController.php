@@ -12,13 +12,24 @@ class UsertableController extends Controller
 
     public function table(Request $request)
     {
-        $users = User::paginate(15);
+        $users = User::latest()->paginate(15);
+
+        $response = [
+            'pagination' => [
+                'total' => $users->total(),
+                'per_page' => $users->perPage(),
+                'last_page' => $users->lastPage(),
+                'from' => $users->firstItem(),
+                'to' => $users->lastItem(),
+                'current_page' => $users->currentPage()
+            ],
+            'data' => $users
+        ];
+        // return response()->json($response);
 
         return view('usertable',['users'=>$users]);
          
-        // if ($request->ajax()){
-            // return view('usertable', compact(['users'=>$users]) );
-        // }
+        
     }
 
 }

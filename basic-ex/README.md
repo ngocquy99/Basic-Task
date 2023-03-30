@@ -127,11 +127,16 @@ thêm sdt, gender, quê quán vào update   --- đã update được, nhưng ch�
 
 
 
+sau khi edit hay update, redirect trang sang user information
 làm basic task list theo hướng dẫn, rồi tự làm rồi làm intermidiate  
 ajax cho trang usertable chuyển trang mới không refresh  --- ĐANG LÀM CÁI NÀY
 build note app dùng laravel
 thử queue function, queue user mới register phải login qua mail access được gửi
 nghiên cứu về job
+viết ajax lấy khi search username hay email hiện ra id như trên dashboard  
+overview lại toàn bộ project, từ regisrter đến login đến update đến pagination đến mail đến cronjob theo task đã cho
+
+
 
 
 ajax pagination : https://www.itsolutionstuff.com/post/laravel-jquery-ajax-pagination-example-from-scratchexample.html
