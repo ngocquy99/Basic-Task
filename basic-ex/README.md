@@ -142,6 +142,7 @@ overview lại toàn bộ project, từ regisrter đến login đến update đ�
 ajax pagination : https://www.itsolutionstuff.com/post/laravel-jquery-ajax-pagination-example-from-scratchexample.html
 
 vur laravel router : https://viblo.asia/p/laravel-vue-su-dung-song-song-vue-router-va-router-laravel-jvElaAyDlkw
+https://viblo.asia/p/laravel-and-vuejs-crud-with-pagination-3P0lPMGo5ox
 
 
 

@@ -99,39 +99,5 @@ $(document).on("click", "#searchUser", function () {
     });
 });
 
-$(document).on("click", "#pagination", function () {
-    $value3 = $("#usertable").val();
-    console.log(value4);
-    let token = $('meta[name="csrf-token"]').attr("content");
-    $.ajaxSetup({ headers: { "X-CSRF-TOKEN": token } });
-    $.ajax({
-        type: "GET",
-        url: "/table",
-        dataType: "json",
-        data: {
-            table: value4,
-        },
-        success: function (rep4) {
-            // $("#usertable").append(rep3.data3. );
-            // console.log(rep3);
-            alert("pagi success");
-        },
-        error: function (rep4) {
-            alert("pagination not found");
-        },
-    });
-});
-
-$(document).on("click", "#pagination", function () {
-    $value = $("#usertable").val();
-    console.log(value);
-    let token = $('meta[name="csrf-token"]').attr("content");
-    $.ajaxSetup({ header: { "X-CSRF-TOKEN": token } });
-    $.ajax({
-        type: "GET",
-        url :"search",
-        dataType : "json",
-    });
-});
 
 // fetch

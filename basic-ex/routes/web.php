@@ -74,6 +74,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
 
 
-
+    Route::get('manage-vue', 'VueItemController@manageVue');
+    Route::resource('vueitems', 'VueItemController');
 
 });
+
+
